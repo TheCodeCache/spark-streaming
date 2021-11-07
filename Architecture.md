@@ -65,3 +65,5 @@ Other Concepts:
 3. Event time and out-of-order data 
 
 
+Reference:  
+  https://databricks.com/blog/2015/07/30/diving-into-apache-spark-streamings-execution-model.html  
