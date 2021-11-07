@@ -55,6 +55,27 @@ In addition, each batch of data is a Resilient Distributed Dataset (RDD), which 
 1. Dynamic load balancing:
 2. Fast failure and straggler recovery
 3. Unification of batch, streaming and interactive analytics
+
+```scala
+// Create data set from Hadoop file
+val dataset = sparkContext.hadoopFile("file")
+// Join each batch in stream with the dataset
+kafkaDStream.transform { batchRDD =>
+  batchRDD.join(dataset).filter(...)
+}
+
+val hiveContext = new HiveContext(sparkContext)
+// ...
+wordCountsDStream.foreachRDD { rdd =>
+  // Convert RDD to DataFrame and register it as a SQL table
+  val wordCountsDataFrame = rdd.toDF("word", "count") 
+  wordCountsDataFrame.registerTempTable("word_counts") 
+}
+// ...
+// Start the JDBC server
+HiveThriftServer2.startWithContext(hiveContext)
+```
+
 4. Advanced analytics like machine learning and interactive SQL
 
 Performance:  
