@@ -1,4 +1,4 @@
-# Spark Streaming
+# Spark Streaming - Performance Tuning Options:
 
 1. Batch and Window sizes
 2. Level of parallelism
@@ -11,5 +11,6 @@
 ![image](https://user-images.githubusercontent.com/26399543/145602514-f259b470-7a2d-48eb-bda4-87271cee3720.png)
 
 **Reference:**  
-https://www.slideshare.net/knoldus/introduction-to-spark-streaming-65224556
+1. https://www.slideshare.net/knoldus/introduction-to-spark-streaming-65224556
+2. https://spark.apache.org/docs/latest/streaming-programming-guide.html#performance-tuning
 
