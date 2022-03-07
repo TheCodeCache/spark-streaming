@@ -1,4 +1,4 @@
-# Spark Streaming with Apache Kafka – 
+# Installing Kafka on Windows – 
 
 **Install Kafka:**
 
